@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/pr1metine/hello-latex/compare/v1.0.2...v1.1.0) (2022-01-06)
+
+
+### Features
+
+* Copy and paste iodhbwm ([435e893](https://github.com/pr1metine/hello-latex/commit/435e893d84d9ad2f0214be142de8a4b96dbaa9e6))
+
 ### [1.0.2](https://github.com/pr1metine/hello-latex/compare/v1.0.1...v1.0.2) (2022-01-06)
 
 
