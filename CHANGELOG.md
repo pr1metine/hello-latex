@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/pr1metine/hello-latex/compare/v1.0.0...v1.0.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* **ci:** Correctly append PDF to release ([2bec63b](https://github.com/pr1metine/hello-latex/commit/2bec63b877c3ed81a27f592a4a09ea6eb060591b))
+
 ## 1.0.0 (2022-01-06)
 
 
