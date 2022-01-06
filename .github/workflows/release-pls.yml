@@ -9,19 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: release-please-action
+      - name: release
         uses: google-github-actions/release-please-action@v3.0.0
         with:
           release-type: simple
           package-name: hello-latex
 
+      - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install LaTeX
+        run: sudo apt-get install texlive-latex-base -y
+        if: ${{ steps.release.outputs.release_created }}
       - name: Build
-        if: ${{ steps.release.outputs.release_created }}
         run: make -C build
-          
-      - name: Release
         if: ${{ steps.release.outputs.release_created }}
-        uses: softprops/action-gh-release@v1
+      - name: Append PDF to Release
+        uses: svenstaro/upload-release-action@v2
         with:
-          files: build/template.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: build/template.pdf
+          tag: ${{ steps.release.outputs.tag_name }}
+        if: ${{ steps.release.outputs.release_created }}
