@@ -9,22 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      - name: Setup Tectonic
+        uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test compile
+        run: tectonic src/template.tex --outdir build
+
       - uses: google-github-actions/release-please-action@v3.0.0
         id: release
         with:
           release-type: simple
           package-name: hello-latex
-
-      - uses: actions/checkout@v2
-        if: ${{ steps.release.outputs.release_created }}
-      - name: Setup Tectonic
-        uses: wtfjoke/setup-tectonic@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        if: ${{ steps.release.outputs.release_created }}
-      - name: Test compile
-        run: tectonic src/template.tex --outdir build
-        if: ${{ steps.release.outputs.release_created }}
       - name: Append PDF to Release
         uses: svenstaro/upload-release-action@v2
         with:
