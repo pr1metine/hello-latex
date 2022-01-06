@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/pr1metine/hello-latex/compare/v1.0.1...v1.0.2) (2022-01-06)
+
+
+### Bug Fixes
+
+* **ci:** Specify id for release-please-action ([413dddb](https://github.com/pr1metine/hello-latex/commit/413dddb1145c6e11a827227884c997e133feebb5))
+
 ### [1.0.1](https://github.com/pr1metine/hello-latex/compare/v1.0.0...v1.0.1) (2022-01-06)
 
 
