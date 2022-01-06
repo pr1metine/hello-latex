@@ -17,11 +17,13 @@ jobs:
 
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
-      - name: Install LaTeX
-        run: sudo apt-get install texlive-latex-base -y
+      - name: Setup Tectonic
+        uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
-      - name: Build
-        run: make -C build
+      - name: Test compile
+        run: tectonic src/template.tex --outdir build
         if: ${{ steps.release.outputs.release_created }}
       - name: Append PDF to Release
         uses: svenstaro/upload-release-action@v2
