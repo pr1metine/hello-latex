@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/pr1metine/hello-latex/compare/v1.0.2...v1.1.0) (2022-01-06)
+
+
+### Features
+
+* Copy and paste iodhbwm ([435e893](https://github.com/pr1metine/hello-latex/commit/435e893d84d9ad2f0214be142de8a4b96dbaa9e6))
+
+
+### Bug Fixes
+
+* **ci:** Migrate to tectonic ([9c6578e](https://github.com/pr1metine/hello-latex/commit/9c6578e401f204332c959385a28b0198b73c2118))
+* Install iodhbwm via tlmgr ([fbdd3c9](https://github.com/pr1metine/hello-latex/commit/fbdd3c9e669c4454cf2e8403c48eb277ee674950))
+* Update apt-get ([1b1a16c](https://github.com/pr1metine/hello-latex/commit/1b1a16c1ed267c0b55f604c89316e698c96576ea))
+
 ### [1.0.2](https://github.com/pr1metine/hello-latex/compare/v1.0.1...v1.0.2) (2022-01-06)
 
 
