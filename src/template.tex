@@ -1,17 +1,24 @@
-\documentclass{article}
+\documentclass[
+    load-dhbw-templates,
+    auto-intro-pages = default,
+    add-tocs-to-toc,
+    debug,
+    language = ngerman
+]{iodhbwm}
+\usepackage[T1]{fontenc}
 
-\title{Template}
-\author{Quang Thanh Ta}
-\date{\today}
+\dhbwsetup{%
+    author                  = Felix Faltin,
+    thesis type             = SA,
+    thesis title            = Verwendung von iodhbwm,
+    student id              = 12345,
+    institute               = Masterfind Factory faltfe,
+    course/id               = Txxxx,
+    supervisor              = Pikachu und Enton,
+    processing period       = {01.01.17 -- 31.01.17},
+    location                = Dreamtown
+}
 
 \begin{document}
-\maketitle
-\tableofcontents
-
-\section{Hello}
-Hello, World!
-
-\section{Goodbye}
-Goodbye, World!
-
+    \Blinddocument
 \end{document}
