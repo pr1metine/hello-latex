@@ -15,3 +15,13 @@ jobs:
         with:
           release-type: simple
           package-name: hello-latex
+
+      - name: Build
+        if: ${{ steps.release.outputs.release_created }}
+        run: make -C build
+          
+      - name: Release
+        if: ${{ steps.release.outputs.release_created }}
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/template.pdf
