@@ -1,0 +1,17 @@
+name: release-pls
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: release-please-action
+        uses: google-github-actions/release-please-action@v3.0.0
+        with:
+          release-type: simple
+          package-name: hello-latex
